@@ -311,6 +311,15 @@
     <ClInclude Include="..\src\Agent.h">
       <Filter>Decision</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\TreeNode.h">
+      <Filter>Decision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ConditionNode.h">
+      <Filter>Decision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ActionNode.h">
+      <Filter>Decision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
