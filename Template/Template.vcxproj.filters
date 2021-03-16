@@ -153,6 +153,18 @@
     <ClCompile Include="..\src\Agent.cpp">
       <Filter>Decision</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\PatrolAction.cpp">
+      <Filter>Decision\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MoveToLOSAction.cpp">
+      <Filter>Decision\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MoveToPlayerAction.cpp">
+      <Filter>Decision\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AttackAction.cpp">
+      <Filter>Decision\Actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -319,6 +331,18 @@
     </ClInclude>
     <ClInclude Include="..\src\ActionNode.h">
       <Filter>Decision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PatrolAction.h">
+      <Filter>Decision\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MoveToLOSAction.h">
+      <Filter>Decision\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MoveToPlayerAction.h">
+      <Filter>Decision\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AttackAction.h">
+      <Filter>Decision\Actions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
