@@ -9,7 +9,7 @@ public:
 	MoveToLOSAction();
 	virtual ~MoveToLOSAction();
 
-	virtual bool Action() override;
+	virtual void Action() override;
 private:
 
 };

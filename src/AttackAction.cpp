@@ -10,7 +10,7 @@ AttackAction::AttackAction()
 AttackAction::~AttackAction()
 = default;
 
-bool AttackAction::Action()
+void AttackAction::Action()
 {
 	std::cout << "Performing Player Action" << std::endl;
 }

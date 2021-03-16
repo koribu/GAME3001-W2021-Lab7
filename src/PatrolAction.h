@@ -9,7 +9,7 @@ public:
 	PatrolAction();
 	virtual ~PatrolAction();
 
-	virtual bool Action() override;
+	virtual void Action() override;
 private:
 	
 };

@@ -3,6 +3,7 @@
 #include "EventManager.h"
 
 // required for IMGUI
+#include "DecisionTree.h"
 #include "imgui.h"
 #include "imgui_sdl.h"
 #include "Renderer.h"
@@ -79,6 +80,12 @@ void PlayScene::start()
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
 
+	// create a dummy decision Tree
+	auto decisionTree = new DecisionTree();
+	decisionTree->setAgent(m_pShip);
+	
+	decisionTree->Display();
+
 	// add the ship to the scene as a start point
 	m_pShip = new Ship();
 	m_pShip->getTransform()->position = glm::vec2(200.0f, 300.0f);
@@ -117,7 +124,7 @@ void PlayScene::GUI_Function()
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
 	
-	ImGui::Begin("GAME3001 - Lab 6", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar);
+	ImGui::Begin("GAME3001 - Lab 7", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar);
 
 	// allow ship rotation
 	static int angle;

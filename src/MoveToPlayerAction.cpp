@@ -10,7 +10,7 @@ MoveToPlayerAction::MoveToPlayerAction()
 MoveToPlayerAction::~MoveToPlayerAction()
 = default;
 
-bool MoveToPlayerAction::Action()
+void MoveToPlayerAction::Action()
 {
 	std::cout << "Performing Player Action" << std::endl;
 }

@@ -9,7 +9,7 @@ public:
 	ActionNode() { isLeaf = false; }
 	virtual ~ActionNode() = default;
 
-	virtual bool Action() = 0;
+	virtual void Action() = 0;
 };
 
 #endif

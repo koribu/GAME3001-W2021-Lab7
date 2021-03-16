@@ -14,7 +14,7 @@ RadiusCondition::~RadiusCondition()
 void RadiusCondition::setIsWithinRadius(bool state)
 {
 	m_isWithinRadius = state;
-	data = state
+	data = state;
 }
 
 

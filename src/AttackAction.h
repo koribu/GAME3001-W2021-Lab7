@@ -9,7 +9,7 @@ public:
 	AttackAction();
 	virtual ~AttackAction();
 
-	virtual bool Action() override;
+	virtual void Action() override;
 private:
 
 };

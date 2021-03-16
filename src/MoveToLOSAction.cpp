@@ -10,7 +10,7 @@ MoveToLOSAction::MoveToLOSAction()
 MoveToLOSAction::~MoveToLOSAction()
 = default;
 
-bool MoveToLOSAction::Action()
+void MoveToLOSAction::Action()
 {
 	std::cout << "Performing MoveToLOS Action" << std::endl;
 }

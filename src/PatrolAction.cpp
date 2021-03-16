@@ -10,7 +10,7 @@ PatrolAction::PatrolAction()
 PatrolAction::~PatrolAction()
 = default;
 
-bool PatrolAction::Action()
+void PatrolAction::Action()
 {
 	std::cout << "Performing Patrol Action" << std::endl;
 }
