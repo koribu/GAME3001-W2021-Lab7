@@ -6,7 +6,7 @@
 class ActionNode : public TreeNode
 {
 public:
-	ActionNode() { isLeaf = false; }
+	ActionNode() { isLeaf = true; }
 	virtual ~ActionNode() = default;
 
 	virtual void Action() = 0;

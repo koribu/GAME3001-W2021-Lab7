@@ -4,7 +4,7 @@
 
 AttackAction::AttackAction()
 {
-	name = "Move To Player Action";
+	name = "Attack Action";
 }
 
 AttackAction::~AttackAction()

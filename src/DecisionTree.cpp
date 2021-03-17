@@ -40,7 +40,7 @@ TreeNode* DecisionTree::AddNode(TreeNode* parent, TreeNode* child_node, TreeNode
 		break;
 	}
 
-	child_node->Parent = parent; //backward travelsal
+	child_node->Parent = parent; //backward traversal
 	return child_node;
 }
 
@@ -52,11 +52,19 @@ void DecisionTree::Display()
 	}
 }
 
+void DecisionTree::Update()
+{
+	m_LOSNode->setLOS(m_agent->hasLOS());
+}
+
 std::string DecisionTree::MakeDecision()
 {
+	Update();
 	auto currentNode = m_treeNodeList[0]; // start at root node
+	
 	while(!currentNode->isLeaf)
 	{
+
 		currentNode = currentNode->data ? currentNode->right : currentNode->left;
 	}
 
@@ -78,14 +86,14 @@ void DecisionTree::m_builTree()
 	m_treeNodeList.push_back(m_closeCombatNode); //node 2
 
 	TreeNode* patrolNode = AddNode(m_radiusNode, new PatrolAction(), LEFT_TREE_NODE);
-	m_treeNodeList.push_back(patrolNode);
+	m_treeNodeList.push_back(patrolNode); // node 3
 
 	TreeNode* moveToLOSNode = AddNode(m_radiusNode, new MoveToLOSAction(), RIGHT_TREE_NODE);
-	m_treeNodeList.push_back(moveToLOSNode);
+	m_treeNodeList.push_back(moveToLOSNode); // node 4
 
 	TreeNode* moveToPlayerNode = AddNode(m_closeCombatNode, new MoveToPlayerAction(), LEFT_TREE_NODE);
-	m_treeNodeList.push_back(moveToPlayerNode);
+	m_treeNodeList.push_back(moveToPlayerNode); // node 5
 
 	TreeNode* attackNode = AddNode(m_closeCombatNode, new AttackAction(), RIGHT_TREE_NODE);
-	m_treeNodeList.push_back(attackNode);
+	m_treeNodeList.push_back(attackNode); // node 6
 }

@@ -20,6 +20,7 @@ public:
 	// convenience function
 	TreeNode* AddNode(TreeNode* parent, TreeNode* child_node, TreeNodeType type);
 	void Display();
+	void Update();
 
 	std::string MakeDecision();
 

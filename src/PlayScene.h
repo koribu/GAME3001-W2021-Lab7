@@ -4,6 +4,7 @@
 
 #include "Scene.h"
 #include "Button.h"
+#include "DecisionTree.h"
 #include "Label.h"
 #include "Obstacle.h"
 #include "ship.h"
@@ -38,6 +39,8 @@ private:
 	Obstacle* m_pObstacle2;
 	Obstacle* m_pObstacle3;
 	void m_CheckShipLOS(DisplayObject* object);
+
+	DecisionTree* decisionTree;
 };
 
 

@@ -80,12 +80,6 @@ void PlayScene::start()
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
 
-	// create a dummy decision Tree
-	auto decisionTree = new DecisionTree();
-	decisionTree->setAgent(m_pShip);
-	
-	decisionTree->Display();
-
 	// add the ship to the scene as a start point
 	m_pShip = new Ship();
 	m_pShip->getTransform()->position = glm::vec2(200.0f, 300.0f);
@@ -110,6 +104,14 @@ void PlayScene::start()
 	m_pTarget = new Target();
 	m_pTarget->getTransform()->position = glm::vec2(600.0f, 300.0f);
 	addChild(m_pTarget);
+
+	decisionTree = new DecisionTree();
+	decisionTree->setAgent(m_pShip);
+	decisionTree->Display();
+
+	std::cout << "-------------------------------" << std::endl;
+	std::cout << decisionTree->MakeDecision() << std::endl;
+	std::cout << "-------------------------------" << std::endl;
 
 }
 
@@ -140,6 +142,10 @@ void PlayScene::GUI_Function()
 	{
 		m_pShip->getTransform()->position.x = shipPosition[0];
 		m_pShip->getTransform()->position.y = shipPosition[1];
+
+		std::cout << "-------------------------------" << std::endl;
+		std::cout << decisionTree->MakeDecision() << std::endl;
+		std::cout << "-------------------------------" << std::endl;
 	}
 	
 	static int targetPosition[] = { m_pTarget->getTransform()->position.x, m_pTarget->getTransform()->position.y };
